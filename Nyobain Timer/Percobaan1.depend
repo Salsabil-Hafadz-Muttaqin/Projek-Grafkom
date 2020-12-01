@@ -20,3 +20,8 @@
 	<GL/glu.h>
 	<GL/glut.h>
 
+1606836723 source:e:\grafkom\project game\projek-grafkom\nyobain timer\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+
