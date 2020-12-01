@@ -9,8 +9,14 @@
 	<GL/gl.h>
 	<GL/glu.h>
 
-1606824221 source:d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\nyobain timer\main.cpp
+1606841695 source:d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\nyobain timer\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<GL/gl.h>
+	"batu.h"
+
+1606841742 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\nyobain timer\batu.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
 
