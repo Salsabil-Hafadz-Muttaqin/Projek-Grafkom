@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1606793165 source:e:\grafkom\es\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+
+976692172 c:\program files\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
