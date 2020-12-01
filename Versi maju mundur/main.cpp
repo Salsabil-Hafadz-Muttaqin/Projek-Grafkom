@@ -413,7 +413,7 @@ int main (int argc, char**argv)
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
     glutInitWindowSize(1000, 1000);
     glutInitWindowPosition(0,0);
-    glutCreateWindow("Nyobain Timer");
+    glutCreateWindow("Ver 1.2");
     gluOrtho2D(0, 160, 0, 90);
     glutDisplayFunc(displayMe);
     glutTimerFunc(1,charController,0);
