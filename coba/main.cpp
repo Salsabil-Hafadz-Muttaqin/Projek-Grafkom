@@ -365,7 +365,7 @@ void displayMe(void){
 
 //glPushMatrix();
   //  glRotate(90, 0, 0, 1.0);
-        glBegin(GL_POLYGON); //BULAT
+        glBegin(GL_POLYGON);
         glColor3b(596, 302, 067);
         glVertex2f(82.01211, 82.00568); //G4
         glVertex2f(83.93433, 79.16079); //H4
@@ -460,7 +460,7 @@ void displayMe(void){
     glVertex2d(7.5,67);
     glEnd();
 
-    glBegin(GL_POLYGON);
+    glBegin(GL_POLYGON);//kiri
     glColor3b(596, 302,40);
     glVertex2d(34,68);
     glVertex2d(41,68);
