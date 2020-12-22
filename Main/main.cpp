@@ -291,7 +291,7 @@ void charController(int data)
 }
 
 void pinggir(){
-    glBegin(GL_POLYGON); //PINGGIRAN
+    glBegin(GL_POLYGON); //PINGGIRAN pojok kiri atas
     glColor3b(596, 302,25);
     glVertex2f(5.45442, 86.0824);//c4
     glVertex2f(8.17462, 88.07024);
@@ -315,7 +315,6 @@ void pinggir(){
     glVertex2f(14.28479, 79.0226);//l5
     glVertex2f(15.3813, 71.95829);//j5
     glVertex2f(15.59005, 68.7945);//k5
-    //glVertex2f(12.8722, 66.54745);//k6
     glVertex2f(11.08943, 67.55026);//j6
     glVertex2f(10.01234, 68.70163);//i6
     glVertex2f(9.38094, 71.45007);//h6
@@ -413,352 +412,346 @@ void pinggir(){
 
 void pinggiran(){
     glPushMatrix();
-    glTranslatef(horizontalMove, verticalMove,0);
     glTranslatef(20,-20,0);
     pinggir();
     glPopMatrix();
 }
 void pinggiran1(){
     glPushMatrix();
-    glTranslatef(horizontalMove, verticalMove,0);
     glTranslatef(10,-50,0);
     pinggir();
     glPopMatrix();
 }
 void pinggiran2(){
     glPushMatrix();
-    glTranslatef(horizontalMove, verticalMove,0);
     glTranslatef(120,-55,0);
     pinggir();
     glPopMatrix();
 }
 void pinggiran3(){
     glPushMatrix();
-    glTranslatef(horizontalMove, verticalMove,0);
     glTranslatef(150,-28,0);
     pinggir();
     glPopMatrix();
 }
 void pinggiran4(){
     glPushMatrix();
-    glTranslatef(horizontalMove, verticalMove,0);
     glTranslatef(119,0,0);
     pinggir();
     glPopMatrix();
 }
-//void Api(void){
-//    glClear(GL_COLOR_BUFFER_BIT);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.4, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//
-//    glTranslatef(40.0, 0.0, 0.0);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.4, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//
-//    glTranslatef(40.0, 0.0, 0.0);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.4, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//
-//    glTranslatef(40.0, 0.0, 0.0);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.4, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//
-//    glTranslatef(0.0, -2.0, 0.0);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.7, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//
-//    glTranslatef(-40.0, 0.0, 0.0);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.7, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//
-//    glTranslatef(-40.0, 0.0, 0.0);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.7, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//
-//    glTranslatef(-40.0, 0.0, 0.0);
-//    glBegin(GL_POLYGON); //Api
-//    glColor3f(1.0, 0.7, 0.0);
-//    glVertex2f(0,0); //M
-//    glVertex2f(41.97, 0.00); //N
-//    glVertex2f(41.97, 3.38); //A
-//    glVertex2f(40.93, 5.56); //B
-//    glVertex2f(37.79, 8.31); //B
-//    glVertex2f(38.27, 6.13); //B
-//    glVertex2f(37.89, 4.14); //B
-//    glVertex2f(35.99, 3.00); //B
-//    glVertex2f(33.81, 4.99); //B
-//    glVertex2f(33.62, 7.37); //B
-//    glVertex2f(31.24, 4.61); //B
-//    glVertex2f(30.29, 3.00); //B
-//    glVertex2f(28.97, 7.08); //B
-//    glVertex2f(26.97, 7.08); //B
-//    glVertex2f(26.59, 9.36); //B
-//    glVertex2f(24.69, 6.70); //B
-//    glVertex2f(23.56, 8.98); //B
-//    glVertex2f(21.66, 4.9); //B
-//    glVertex2f(18.90, 2.62); //B
-//    glVertex2f(16.44, 3.28); //B
-//    glVertex2f(15.01, 3.95); //B
-//    glVertex2f(14.92, 6.42); //B
-//    glVertex2f(13.30, 4.04); //B
-//    glVertex2f(12.16, 2.33); //B
-//    glVertex2f(11.03, 5.94); //B
-//    glVertex2f(9.13, 7.65); //B
-//    glVertex2f(9.12, 5.75); //B
-//    glVertex2f(7.80, 3.57); //B
-//    glVertex2f(5.99, 4.42); //B
-//    glVertex2f(5.43, 6.89); //B
-//    glVertex2f(6.09, 10.02); //B
-//    glVertex2f(2.58, 6.89); //B
-//    glVertex2f(0.87, 4.71); //B
-//    glVertex2f(0, 2.14); //B
-//    glEnd();
-//}
+void Api(){
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.4, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+
+    //glTranslatef(40.0, 0.0, 0.0);
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.4, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+
+    //glTranslatef(40.0, 0.0, 0.0);
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.4, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+
+    //glTranslatef(40.0, 0.0, 0.0);
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.4, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+
+    //glTranslatef(0.0, -2.0, 0.0);
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.7, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+
+    //glTranslatef(-40.0, 0.0, 0.0);
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.7, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+
+    //glTranslatef(-40.0, 0.0, 0.0);
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.7, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+
+    //glTranslatef(-40.0, 0.0, 0.0);
+    glBegin(GL_POLYGON); //Api
+    glColor3f(1.0, 0.7, 0.0);
+    glVertex2f(0,0); //M
+    glVertex2f(41.97, 0.00); //N
+    glVertex2f(41.97, 3.38); //A
+    glVertex2f(40.93, 5.56); //B
+    glVertex2f(37.79, 8.31); //B
+    glVertex2f(38.27, 6.13); //B
+    glVertex2f(37.89, 4.14); //B
+    glVertex2f(35.99, 3.00); //B
+    glVertex2f(33.81, 4.99); //B
+    glVertex2f(33.62, 7.37); //B
+    glVertex2f(31.24, 4.61); //B
+    glVertex2f(30.29, 3.00); //B
+    glVertex2f(28.97, 7.08); //B
+    glVertex2f(26.97, 7.08); //B
+    glVertex2f(26.59, 9.36); //B
+    glVertex2f(24.69, 6.70); //B
+    glVertex2f(23.56, 8.98); //B
+    glVertex2f(21.66, 4.9); //B
+    glVertex2f(18.90, 2.62); //B
+    glVertex2f(16.44, 3.28); //B
+    glVertex2f(15.01, 3.95); //B
+    glVertex2f(14.92, 6.42); //B
+    glVertex2f(13.30, 4.04); //B
+    glVertex2f(12.16, 2.33); //B
+    glVertex2f(11.03, 5.94); //B
+    glVertex2f(9.13, 7.65); //B
+    glVertex2f(9.12, 5.75); //B
+    glVertex2f(7.80, 3.57); //B
+    glVertex2f(5.99, 4.42); //B
+    glVertex2f(5.43, 6.89); //B
+    glVertex2f(6.09, 10.02); //B
+    glVertex2f(2.58, 6.89); //B
+    glVertex2f(0.87, 4.71); //B
+    glVertex2f(0, 2.14); //B
+    glEnd();
+}
 //void apiapi(){
 //}
 void displayMe(void){
@@ -833,8 +826,6 @@ void displayMe(void){
     glVertex2f(98, 51);
     glVertex2f(95, 53);
     glEnd();
-
-
 
 //glPushMatrix();
   //  glRotate(90, 0, 0, 1.0);
@@ -926,8 +917,6 @@ void displayMe(void){
         glEnd();
 
 
-
-
     glutSwapBuffers();
 
     //Objek Batu
@@ -937,7 +926,7 @@ void displayMe(void){
     //glClear(GL_COLOR_BUFFER_BIT);
     //memanggil ular
     UlarObjek();
-    //Api();
+    Api();
     pinggiran();
     pinggiran1();
     pinggiran2();
