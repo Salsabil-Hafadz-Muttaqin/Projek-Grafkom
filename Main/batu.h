@@ -46,7 +46,7 @@
         glVertex2f(65.7677869171207, 50.0356296059835); //G
         glEnd();
 
-        glPopMatrix();
+        //glPopMatrix();
     }
 
 

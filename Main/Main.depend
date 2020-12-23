@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1608702086 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
+1608728255 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<GL/gl.h>
@@ -220,7 +220,7 @@
 	<stddef.h>
 	<GL/gl.h>
 
-1607488871 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\batu.h
+1608727506 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\batu.h
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>

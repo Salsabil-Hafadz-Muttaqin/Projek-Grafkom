@@ -11,6 +11,8 @@ float verticalMove;
 float posisiX[2] = {0,20};
 float posisiY[2] = {0,20};
 
+int movebatu = 40;
+
 //menggambar objek ular
 void ObjekUlar(){
     glScalef(0.4,0.4,0);
@@ -479,7 +481,7 @@ void Api(){
     glVertex2f(0, 2.14); //B
     glEnd();
 
-    //glTranslatef(40.0, 0.0, 0.0);
+    glTranslatef(40.0, 0.0, 0.0);
     glBegin(GL_POLYGON); //Api
     glColor3f(1.0, 0.4, 0.0);
     glVertex2f(0,0); //M
@@ -518,7 +520,7 @@ void Api(){
     glVertex2f(0, 2.14); //B
     glEnd();
 
-    //glTranslatef(40.0, 0.0, 0.0);
+    glTranslatef(40.0, 0.0, 0.0);
     glBegin(GL_POLYGON); //Api
     glColor3f(1.0, 0.4, 0.0);
     glVertex2f(0,0); //M
@@ -557,7 +559,7 @@ void Api(){
     glVertex2f(0, 2.14); //B
     glEnd();
 
-    //glTranslatef(40.0, 0.0, 0.0);
+    glTranslatef(40.0, 0.0, 0.0);
     glBegin(GL_POLYGON); //Api
     glColor3f(1.0, 0.4, 0.0);
     glVertex2f(0,0); //M
@@ -596,7 +598,7 @@ void Api(){
     glVertex2f(0, 2.14); //B
     glEnd();
 
-    //glTranslatef(0.0, -2.0, 0.0);
+    glTranslatef(0.0, -2.0, 0.0);
     glBegin(GL_POLYGON); //Api
     glColor3f(1.0, 0.7, 0.0);
     glVertex2f(0,0); //M
@@ -635,7 +637,7 @@ void Api(){
     glVertex2f(0, 2.14); //B
     glEnd();
 
-    //glTranslatef(-40.0, 0.0, 0.0);
+    glTranslatef(-40.0, 0.0, 0.0);
     glBegin(GL_POLYGON); //Api
     glColor3f(1.0, 0.7, 0.0);
     glVertex2f(0,0); //M
@@ -674,7 +676,7 @@ void Api(){
     glVertex2f(0, 2.14); //B
     glEnd();
 
-    //glTranslatef(-40.0, 0.0, 0.0);
+    glTranslatef(-40.0, 0.0, 0.0);
     glBegin(GL_POLYGON); //Api
     glColor3f(1.0, 0.7, 0.0);
     glVertex2f(0,0); //M
@@ -713,7 +715,7 @@ void Api(){
     glVertex2f(0, 2.14); //B
     glEnd();
 
-    //glTranslatef(-40.0, 0.0, 0.0);
+    glTranslatef(-40.0, 0.0, 0.0);
     glBegin(GL_POLYGON); //Api
     glColor3f(1.0, 0.7, 0.0);
     glVertex2f(0,0); //M
@@ -920,13 +922,16 @@ void displayMe(void){
     glutSwapBuffers();
 
     //Objek Batu
+    glPushMatrix();
+    glTranslatef(0,movebatu,0);
     batu();
+    glPopMatrix();
     pinggir();
     glClearColor(1,1,1,1);
     //glClear(GL_COLOR_BUFFER_BIT);
     //memanggil ular
     UlarObjek();
-    Api();
+    //Api();
     pinggiran();
     pinggiran1();
     pinggiran2();
@@ -935,6 +940,14 @@ void displayMe(void){
     glFlush();
     glutSwapBuffers();
 }
+void movement (int a){
+    movebatu-- ;
+    if (movebatu==-70){
+        movebatu = 40;
+    }
+    glutTimerFunc(100,movement,1);//100 : berapa detik sekali movement dipanggil
+}
+
 
 void myinit(){
     glMatrixMode(GL_PROJECTION);
@@ -955,6 +968,7 @@ int main (int argc, char**argv)
     glutCreateWindow("Ver 1.2");
     gluOrtho2D(0, 160, 0, 90);
     glutDisplayFunc(displayMe);
+    glutTimerFunc(100,movement,1);
     glutTimerFunc(1,charController,0);
     myinit();
     glutMainLoop();
