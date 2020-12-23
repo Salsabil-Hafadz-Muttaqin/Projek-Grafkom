@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1608728255 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
+1608735328 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<GL/gl.h>
 	"batu.h"
+	"pinggir.h"
+	"pohon.h"
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -221,6 +223,16 @@
 	<GL/gl.h>
 
 1608727506 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\batu.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608734397 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\pinggir.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608735222 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\pohon.h
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>

@@ -2,6 +2,8 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include "batu.h"
+#include "pinggir.h"
+#include "pohon.h"
 
 int angle;
 float horizontalMove;
@@ -290,126 +292,6 @@ void charController(int data)
 
     glutPostRedisplay();
     glutTimerFunc(1,charController,0);
-}
-
-void pinggir(){
-    glBegin(GL_POLYGON); //PINGGIRAN pojok kiri atas
-    glColor3b(596, 302,25);
-    glVertex2f(5.45442, 86.0824);//c4
-    glVertex2f(8.17462, 88.07024);
-    glVertex2f(10.58095, 88.27949);
-    glVertex2f(14.19653, 87.75637);
-    glVertex2f(15.34738, 86.5009);
-    glVertex2f(15.03351, 84.30381);
-    glVertex2f(13.04567, 83.46683);
-    glVertex2f(9.32547, 83.57145);
-    glVertex2f(6.60527, 84.40843);//e5
-    glEnd();
-
-    glBegin(GL_POLYGON);
-    glColor3b(596,302,25);
-    glVertex2f(5.45442, 86.0824);//c4
-    glVertex2f(6.60527, 84.40843);//e5
-    glVertex2f(9.32547, 83.57145);//d5
-    glVertex2f(13.04567, 83.46683);//c5
-    glVertex2f(15.03351, 84.30381);//b5
-    glVertex2f(15.34738, 86.5009);//s4
-    glVertex2f(14.28479, 79.0226);//l5
-    glVertex2f(15.3813, 71.95829);//j5
-    glVertex2f(15.59005, 68.7945);//k5
-    glVertex2f(11.08943, 67.55026);//j6
-    glVertex2f(10.01234, 68.70163);//i6
-    glVertex2f(9.38094, 71.45007);//h6
-    glVertex2f(8.78668, 74.12422);//g6
-    glVertex2f(6.81821, 77.42977);//f6
-    glVertex2f(5.97753, 78.86341);//f5
-    glEnd();
-
-    glBegin(GL_POLYGON);
-    glColor3b(596,290,0);
-    glVertex2f(15.59005, 68.7945);//k5
-    glVertex2f(11.08943, 67.55026);
-    glVertex2f(9.01234, 68.70163);
-    glVertex2f(9.38094, 71.45007);
-    glVertex2f(7.78668, 74.12422);
-    glVertex2f(7.81821, 77.42977);
-    glVertex2f(5.97753, 78.86341);//f5
-    glVertex2f(6.65309, 71.8499);//g5
-    glVertex2f(7.23301, 66.99477);//h5
-    glVertex2f(10.86262, 67.84395);//L5
-    glEnd();
-
-    glBegin(GL_LINE_STRIP);
-    glColor3b(478, 243, 055);
-    glVertex2f(8.81363, 81.55906);//l6
-    glVertex2f(8.72436, 74.06098);//m6
-    glEnd();
-
-    glBegin(GL_LINE_STRIP);
-    glColor3b(478, 243, 055);
-    glVertex2f(10.37601, 80.83611);//n6
-    glVertex2f(10.30859, 70.81389);
-    glEnd();
-
-    glBegin(GL_LINE_STRIP);
-    glColor3b(478, 243, 055);
-    glVertex2f(12.36473, 80.81368);//p6
-    glVertex2f(12.2299, 73.29693);
-    glEnd();
-
-    glBegin(GL_LINE_STRIP);
-    glColor3b(478,243,055);
-    glVertex2f(5.45442, 86.0824);//c4
-    glVertex2f(8.17462, 88.07024);
-    glVertex2f(10.58095, 88.27949);
-    glVertex2f(14.19653, 87.75637);
-    glVertex2f(15.34738, 86.5009);
-    glVertex2f(15.03351, 84.30381);
-    glVertex2f(13.04567, 83.46683);
-    glVertex2f(9.32547, 83.57145);
-    glVertex2f(6.60527, 84.40843);//e5
-    glVertex2f(5.45442, 86.0824);//c4
-    glEnd();
-
-    glBegin(GL_LINE_STRIP);
-    glColor3b(478,243,055);
-    glVertex2f(5.45442, 86.0824);//c4
-    glVertex2f(6.60527, 84.40843);//e5
-    glVertex2f(9.32547, 83.57145);//d5
-    glVertex2f(13.04567, 83.46683);//c5
-    glVertex2f(15.03351, 84.30381);//b5
-    glVertex2f(15.34738, 86.5009);//s4
-    glVertex2f(14.28479, 79.0226);//l5
-    glVertex2f(15.3813, 71.95829);//j5
-    glVertex2f(15.59005, 68.7945);//k5
-    glVertex2f(11.08943, 67.55026);//j6
-    glVertex2f(10.86262, 67.84395);//L5
-    glVertex2f(7.23301, 66.99477);//h5
-    glVertex2f(6.65309, 71.8499);//g5
-    glVertex2f(5.97753, 78.86341);//f5
-    glVertex2f(5.45442, 86.0824);//c4
-    glEnd();
-
-    glBegin(GL_LINE_STRIP);//mlungker
-    glColor3b(478,243,055);
-    glVertex2f(11.68379, 84.62869);
-    glVertex2f(10.18483, 84.58989);
-    glVertex2f(8.20711, 84.92927);
-    glVertex2f(7.87454, 86.14842);
-    glVertex2f(8.80966, 87.28523);//a6
-    glVertex2f(10.00055, 87.57435);
-    glVertex2f(12.95238, 87.5843);
-    glVertex2f(13.50344, 86.92);//v5
-    glVertex2f(13.75393, 86.11);
-    glVertex2f(13.60562, 85.4);
-    glVertex2f(11.80418, 85.29);
-    glVertex2f(8.76272, 85.5);//r5
-    glVertex2f(8.53754, 86);
-    glVertex2f(9.24123, 86.9);
-    glVertex2f(10.62046, 86.7);
-    glVertex2f(10.52156, 86);
-    glVertex2f(9.54969, 86.08148);
-    glEnd();
 }
 
 void pinggiran(){
@@ -829,95 +711,6 @@ void displayMe(void){
     glVertex2f(95, 53);
     glEnd();
 
-//glPushMatrix();
-  //  glRotate(90, 0, 0, 1.0);
-        glBegin(GL_POLYGON); //BULAT
-        glColor3b(596, 302, 067);
-        glVertex2f(82.01211, 82.00568); //G4
-        glVertex2f(83.93433, 79.16079); //H4
-        glVertex2f(83.70367, 76.08523); //I4
-        glVertex2f(81.5748, 74.9999); //J4
-        glVertex2f(79.78233, 76.08523); //K4
-        glVertex2f(78.85966, 78.54568); //L4
-        glVertex2f(79.24411, 80.69857); //M4
-        glVertex2f(80.35921, 81.92272); //N4
-        glEnd();
-
-        glBegin(GL_POLYGON); //panjang
-        glColor3b(596, 302, 067);
-        glVertex2f(82.01211, 82.00568); //G4
-        glVertex2f(102.11436, 82.21438); //O4
-        glVertex2f(103.57355, 80.43914); //P4
-        glVertex2f(103.81442, 78.35153); //Q4
-        glVertex2f(102.90546, 76.14876); //R4
-        glVertex2f(81.5748, 74.9999); //J4
-        glEnd();
-
-        glBegin(GL_LINE_STRIP); // SEMUA
-        glColor3b(478, 243, 055);
-        glVertex2f(82.01211, 82.00568); //G4
-        glVertex2f(83.93433, 79.16079); //H4
-        glVertex2f(83.70367, 76.08523); //I4
-        glVertex2f(81.5748, 74.9999); //J4
-        glVertex2f(79.78233, 76.08523); //K4
-        glVertex2f(78.85966, 78.54568); //L4
-        glVertex2f(79.24411, 80.69857); //M4
-        glVertex2f(80.35921, 81.92272); //N4
-        glEnd();
-
-        glBegin(GL_LINE_STRIP); // BULAT
-        glColor3b(478, 243, 055);
-        glVertex2f(82.01211, 82.00568); //G4
-        glVertex2f(102.11436, 82.21438); //O4
-        glVertex2f(103.57355, 80.43914); //P4
-        glVertex2f(103.81442, 78.35153); //Q4
-        glVertex2f(102.90546, 76.14876); //R4
-        glVertex2f(81.5748, 74.9999); //J4
-        glEnd();
-
-        glBegin(GL_LINE_STRIP); //TAMBAHAN
-        glColor3b(478, 243, 055);
-        glVertex2f(80.35921, 81.92272); //N4
-        glVertex2f(82.01211, 82.00568); //G4
-        glEnd();
-
-        glBegin(GL_LINE_STRIP); //GARIS 1
-        glColor3b(478, 243, 055);
-        glVertex2f(86.08913, 80.3395); //T4
-        glVertex2f(100, 80); //U4
-        glEnd();
-
-        glBegin(GL_LINE_STRIP); //GARIS2
-        glColor3b(478, 243, 055);
-        glVertex2f(89.13773, 78.72554); //V4
-        glVertex2f(98.34329, 78.60599); //W4
-        glEnd();
-
-        glBegin(GL_LINE_STRIP); //GARIS 3
-        glColor3b(478, 243, 055);
-        glVertex2f(87.58354, 76.93225); //Z4
-        glVertex2f(99.95726, 77.29091); //A5
-        glEnd();
-
-        glBegin(GL_LINE_STRIP); // BULAT2
-        glColor3b(478, 243, 055);
-        glVertex2f(81.21046, 80.63574); //S5
-        glVertex2f(81.98782, 80.19847); //B5
-        glVertex2f(82.53845, 79.40491); //C5
-        glVertex2f(82.84616, 78.43321); //D5
-        glVertex2f(82.76518, 77.39673); //E5
-        glVertex2f(81.66392, 76.42502); //F5
-        glVertex2f(80.30353, 77.46151); //G5
-        glVertex2f(80.17397, 78.64374); //H5
-        glVertex2f(81.04851, 79.84218); //I5
-        glVertex2f(81.90684, 79.37252); //J5
-        glVertex2f(82.32792, 78.38462); //K5
-        glVertex2f(81.76109, 77.25097); //L5
-        glVertex2f(80.80558, 78.10931); //M5
-        glVertex2f(81.17807, 79.06482); //N5
-        glVertex2f(81.72676, 78.40643); //O5
-        glEnd();
-
 
     glutSwapBuffers();
 
@@ -927,6 +720,7 @@ void displayMe(void){
     batu();
     glPopMatrix();
     pinggir();
+    pohon();
     glClearColor(1,1,1,1);
     //glClear(GL_COLOR_BUFFER_BIT);
     //memanggil ular
