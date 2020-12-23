@@ -225,3 +225,14 @@
 	<GL/glu.h>
 	<GL/glut.h>
 
+1608729523 source:d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\projek-grafkom\main\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	"batu.h"
+
+1608729341 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\projek-grafkom\main\batu.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+

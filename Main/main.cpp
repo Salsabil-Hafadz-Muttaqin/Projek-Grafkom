@@ -8,7 +8,7 @@ float horizontalMove;
 float verticalMove;
 
 // Collider
-float posisiX[2] = {0,20};
+float posisiX[2] = {0,0};
 float posisiY[2] = {0,20};
 
 int movebatu = 40;
