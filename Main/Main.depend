@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1608735328 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
+1608736156 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<GL/gl.h>
@@ -227,14 +227,15 @@
 	<GL/glu.h>
 	<GL/glut.h>
 
-<<<<<<< HEAD
+1608727506 D
+
 1608734397 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\pinggir.h
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
 
 1608735222 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\pohon.h
-=======
+
 1608729523 source:d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\projek-grafkom\main\main.cpp
 	<windows.h>
 	<GL/glut.h>
@@ -242,7 +243,8 @@
 	"batu.h"
 
 1608729341 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\projek-grafkom\main\batu.h
->>>>>>> 289afa15ea75851a5c47c7d91a43d9b88c39bf61
+
+1608729341 afa15ea75851a5c47c7d91a43d9b88c39bf61
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
