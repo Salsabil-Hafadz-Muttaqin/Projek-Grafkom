@@ -756,9 +756,9 @@ void Api(){
 //}
 void displayMe(void){
 
-    glClear(GL_COLOR_BUFFER_BIT);
+    //glClear(GL_COLOR_BUFFER_BIT);
     glBegin(GL_POLYGON);
-    glColor3b(247, 105, 105);
+    glColor3f(0.012, 0.4, 0.208);
     glVertex2f(0, 0);
     glVertex2f(0, 90);
     glVertex2f(160, 90);
