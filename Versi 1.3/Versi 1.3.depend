@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1608806485 source:e:\grafkom\new folder\versi 1.3\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	"batu.h"
+	"pinggir.h"
+	"pohon.h"
+	"genangan.h"
+
+976692172 c:\program files\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1608803008 e:\grafkom\new folder\versi 1.3\batu.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608803008 e:\grafkom\new folder\versi 1.3\pinggir.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608803008 e:\grafkom\new folder\versi 1.3\pohon.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608805489 e:\grafkom\new folder\versi 1.3\genangan.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
