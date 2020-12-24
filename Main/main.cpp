@@ -14,6 +14,7 @@ float posisiX[2] = {0,0};
 float posisiY[2] = {0,20};
 
 int movebatu = 40;
+int movepohon = 40;
 
 //menggambar objek ular
 void ObjekUlar(){
@@ -719,8 +720,14 @@ void displayMe(void){
     glTranslatef(0,movebatu,0);
     batu();
     glPopMatrix();
+
     pinggir();
+
+    glPushMatrix();
+    glTranslatef(0,movepohon,0);
     pohon();
+    glPopMatrix();
+
     glClearColor(1,1,1,1);
     //glClear(GL_COLOR_BUFFER_BIT);
     //memanggil ular
@@ -742,6 +749,13 @@ void movement (int a){
     glutTimerFunc(100,movement,1);//100 : berapa detik sekali movement dipanggil
 }
 
+void move2 (int a){
+    movepohon-- ;
+    if (movepohon == -70){
+        movepohon == 40;
+    }
+    glutTimerFunc(100,move2,1);
+}
 
 void myinit(){
     glMatrixMode(GL_PROJECTION);
@@ -763,6 +777,7 @@ int main (int argc, char**argv)
     gluOrtho2D(0, 160, 0, 90);
     glutDisplayFunc(displayMe);
     glutTimerFunc(100,movement,1);
+    glutTimerFunc(100,move2,1);
     glutTimerFunc(1,charController,0);
     myinit();
     glutMainLoop();
