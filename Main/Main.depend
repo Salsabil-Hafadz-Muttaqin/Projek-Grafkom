@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1608894525 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
+1608908573 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<GL/gl.h>
@@ -229,7 +229,7 @@
 	<GL/glu.h>
 	<GL/glut.h>
 
-1608727506 D
+1608809481 D
 
 1608734397 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\pinggir.h
 	<GL/gl.h>
@@ -251,9 +251,8 @@
 	<GL/glu.h>
 	<GL/glut.h>
 
-<<<<<<< HEAD
 1608891261 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\lubang.h
-=======
+
 1608811098 source:d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\main.cpp
 	<windows.h>
 	<GL/glut.h>
@@ -268,17 +267,16 @@
 	<GL/glut.h>
 
 1608809481 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\pinggir.h
->>>>>>> cf078ef3c763719839337ff0a85d405a97640857
+
+1608809481 78ef3c763719839337ff0a85d405a97640857
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
 
-<<<<<<< HEAD
 1608891263 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\segitiga.h
-=======
+
 1608809481 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\pohon.h
->>>>>>> cf078ef3c763719839337ff0a85d405a97640857
-	<GL/gl.h>
-	<GL/glu.h>
-	<GL/glut.h>
 
