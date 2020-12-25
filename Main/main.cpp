@@ -4,6 +4,8 @@
 #include "batu.h"
 #include "pinggir.h"
 #include "pohon.h"
+#include "lubang.h"
+#include "segitiga.h"
 
 int angle;
 float horizontalMove;
