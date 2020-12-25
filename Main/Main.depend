@@ -251,12 +251,33 @@
 	<GL/glu.h>
 	<GL/glut.h>
 
+<<<<<<< HEAD
 1608891261 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\lubang.h
+=======
+1608811098 source:d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	"batu.h"
+	"pinggir.h"
+	"pohon.h"
+
+1608729341 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\batu.h
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
 
+1608809481 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\pinggir.h
+>>>>>>> cf078ef3c763719839337ff0a85d405a97640857
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+<<<<<<< HEAD
 1608891263 c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\segitiga.h
+=======
+1608809481 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\pohon.h
+>>>>>>> cf078ef3c763719839337ff0a85d405a97640857
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>

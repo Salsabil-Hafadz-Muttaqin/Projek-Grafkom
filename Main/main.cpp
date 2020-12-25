@@ -266,32 +266,32 @@ void charController(int data)
     if (GetAsyncKeyState(VK_UP)){
         if (posisiY[5] <= 67){
             posisiY[0] += 0.1f;
-            posisiY[5] += 0.1f;
-            verticalMove += 0.1f;
+            posisiY[5] += 0.5f;
+            verticalMove += 0.5f;
         }
     }
     //jika menekan tombol panah bawah
     else if (GetAsyncKeyState(VK_DOWN)){
         if (posisiY[0] >= 0){
-            posisiY[0] -= 0.1f;
-            posisiY[5] -= 0.1f;
-            verticalMove -= 0.1f;
+            posisiY[0] -= 0.5f;
+            posisiY[5] -= 0.5f;
+            verticalMove -= 0.5f;
         }
     }
     //jika menekan tombol panah kiri
     if(GetAsyncKeyState(VK_LEFT)){
         if (posisiX[0] >= -28){
-            posisiX[0] -= 0.1f;
-            posisiX[5] -= 0.1f;
-            horizontalMove -= 0.1f;
+            posisiX[0] -= 0.5f;
+            posisiX[5] -= 0.5f;
+            horizontalMove -= 0.5f;
         }
     }
     //jika menekan tombol panah kanan
     else if (GetAsyncKeyState(VK_RIGHT)){
         if (posisiX[5] <= 28){
-            posisiX[0] += 0.1f;
-            posisiX[5] += 0.1f;
-            horizontalMove += 0.1f;
+            posisiX[0] += 0.5f;
+            posisiX[5] += 0.5f;
+            horizontalMove += 0.5f;
             }
     }
 
