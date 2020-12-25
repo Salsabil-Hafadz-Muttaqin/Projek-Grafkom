@@ -751,7 +751,7 @@ void movement (int a){
 
 void move2 (int a){
     movepohon-- ;
-    if (movepohon == -70){
+    if (movepohon == -80){
         movepohon = 40;
     }
     glutTimerFunc(100,move2,1);
@@ -760,13 +760,13 @@ void move2 (int a){
 void movelubang2 (int a){
     movelubang-- ;
     if (movelubang == -70){
-        movelubang = 40;
+        movelubang = 70;
     }
     glutTimerFunc(100,movelubang2,1);
 }
 void movetriangle (int a){
     movetri-- ;
-    if (movetri == -70){
+    if (movetri == -110){
         movetri = 40;
     }
     glutTimerFunc(100,movetriangle,1);
