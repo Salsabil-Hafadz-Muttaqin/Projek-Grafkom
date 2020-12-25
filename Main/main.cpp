@@ -20,6 +20,13 @@ int movepohon = 40;
 int movelubang = 40;
 int movetri = 40;
 
+//batas
+float colliderbatu [4]= {54.3,98,65.7,90};//x1,y1,x2,y2
+float colliderular [4]= {78,23,82,-16};
+float collidersegitiga [4]={73,149,88,129};
+float colliderbatang [4]={79,122,104,115};
+float colliderlubang [4]={91,74,110.18,62};
+
 //menggambar objek ular
 void ObjekUlar(){
     glScalef(0.4,0.4,0);
@@ -249,9 +256,6 @@ void ObjekUlar(){
 }
 
 void UlarObjek(){
-    //Memasang collider pada objek ular
-    //ColliderPersegi();
-
     glPushMatrix();
     glTranslatef(horizontalMove, verticalMove,0); //mengendalikan posisi ular
     glTranslatef(75,15,0); //menengahkan view
@@ -262,27 +266,29 @@ void UlarObjek(){
 //fungsi mengendalikan objek
 void charController(int data)
 {
-    //jika menekan tombol panah atas
-    if (GetAsyncKeyState(VK_UP)){
-        if (posisiY[5] <= 67){
-            posisiY[0] += 0.1f;
-            posisiY[5] += 0.5f;
-            verticalMove += 0.5f;
-        }
-    }
-    //jika menekan tombol panah bawah
-    else if (GetAsyncKeyState(VK_DOWN)){
-        if (posisiY[0] >= 0){
-            posisiY[0] -= 0.5f;
-            posisiY[5] -= 0.5f;
-            verticalMove -= 0.5f;
-        }
-    }
+//    //jika menekan tombol panah atas
+//    if (GetAsyncKeyState(VK_UP)){
+//        if (posisiY[5] <= 67){
+//            posisiY[0] += 0.1f;
+//            posisiY[5] += 0.5f;
+//            verticalMove += 0.5f;
+//        }
+//    }
+//    //jika menekan tombol panah bawah
+//    else if (GetAsyncKeyState(VK_DOWN)){
+//        if (posisiY[0] >= 0){
+//            posisiY[0] -= 0.5f;
+//            posisiY[5] -= 0.5f;
+//            verticalMove -= 0.5f;
+//        }
+//    }
     //jika menekan tombol panah kiri
     if(GetAsyncKeyState(VK_LEFT)){
         if (posisiX[0] >= -28){
             posisiX[0] -= 0.5f;
             posisiX[5] -= 0.5f;
+            colliderular[0] -= 0.5f;
+            colliderular[2]-= 0.5f;
             horizontalMove -= 0.5f;
         }
     }
@@ -291,6 +297,8 @@ void charController(int data)
         if (posisiX[5] <= 28){
             posisiX[0] += 0.5f;
             posisiX[5] += 0.5f;
+            colliderular[0] += 0.5f;
+            colliderular[2]+= 0.5f;
             horizontalMove += 0.5f;
             }
     }
@@ -650,9 +658,18 @@ void Api(){
 }
 //void apiapi(){
 //}
+
+void gambarCollider() { //buat ngecek collider
+    glColor3b(120,120,120);
+    glRectd(colliderbatu[0], colliderbatu[1], colliderbatu[2], colliderbatu[3]);
+    glRectd(colliderular[0], colliderular[1], colliderular[2], colliderular[3]);
+    glRectd(collidersegitiga[0], collidersegitiga[1], collidersegitiga[2], collidersegitiga[3]);
+    glRectd(colliderbatang[0], colliderbatang[1], colliderbatang[2], colliderbatang[3]);
+    glRectd(colliderlubang[0], colliderlubang[1], colliderlubang[2], colliderlubang[3]);
+}
+
 void displayMe(void){
 
-    //glClear(GL_COLOR_BUFFER_BIT);
     glBegin(GL_POLYGON);
     glColor3f(0.012, 0.4, 0.208);
     glVertex2f(0, 0);
@@ -660,7 +677,6 @@ void displayMe(void){
     glVertex2f(160, 90);
     glVertex2f(160, 0);
     glEnd();
-
 
     glBegin(GL_POLYGON);
     glColor3b(0, 0, 0);
@@ -705,6 +721,7 @@ void displayMe(void){
     glutSwapBuffers();
 
     //Objek Batu
+    gambarCollider();
     glPushMatrix();
     glTranslatef(0,movebatu,0);
     batu();
@@ -743,34 +760,112 @@ void displayMe(void){
 }
 void movement (int a){
     movebatu-- ;
+    colliderbatu[1]--;
+    colliderbatu[3]--;
     if (movebatu==-70){
         movebatu = 40;
+        colliderbatu[1]=98;
+        colliderbatu[3]=90;
     }
     glutTimerFunc(100,movement,1);//100 : berapa detik sekali movement dipanggil
+
+    if(
+    (colliderular[0]>=colliderbatu[0] && colliderular[0]<= colliderbatu[2])&&(colliderular[1]>=colliderbatu[1]&& colliderular[1]>=colliderbatu[3]) ||
+    (colliderular[2]>=colliderbatu[0] && colliderular[2]<= colliderbatu[2])&&(colliderular[3]>=colliderbatu[1]&& colliderular[3]>=colliderbatu[3])
+    ){
+        horizontalMove=0;
+        verticalMove=0;
+        movebatu=40;
+        colliderbatu[1]=98;//54.3,98,65.7,90
+        colliderbatu[3]=90;
+        colliderular[0]=78;
+        colliderular[1]=23;
+        colliderular[2]=82;
+        colliderular[3]=-16;
+    }
 }
 
-void move2 (int a){
+void move2 (int a){//79,122,104,115
     movepohon-- ;
+    colliderbatang[1]--;
+    colliderbatang[3]--;
     if (movepohon == -80){
         movepohon = 40;
+        colliderbatang[1]=122;
+        colliderbatang[3]=115;
     }
     glutTimerFunc(100,move2,1);
+
+    if(
+    (colliderular[0]>=colliderbatang[0] && colliderular[0]<= colliderbatang[2])&&(colliderular[1]>=colliderbatang[1]&& colliderular[1]>=colliderbatang[3]) ||
+    (colliderular[2]>=colliderbatang[0] && colliderular[2]<= colliderbatang[2])&&(colliderular[3]>=colliderbatang[1]&& colliderular[3]>=colliderbatang[3])
+    ){
+        horizontalMove=0;
+        verticalMove=0;
+        movepohon=40;
+        colliderbatang[1]=122;
+        colliderbatang[3]=115;
+        colliderular[0]=78;
+        colliderular[1]=23;
+        colliderular[2]=82;
+        colliderular[3]=-16;
+    }
 }
 
-void movelubang2 (int a){
+void movelubang2 (int a){//91,74,110.18,62
     movelubang-- ;
+    colliderlubang[1]--;
+    colliderlubang[3]--;
     if (movelubang == -70){
-        movelubang = 70;
+        movelubang = 40;
+        colliderlubang[1]=74;
+        colliderlubang[3]=62;
     }
     glutTimerFunc(100,movelubang2,1);
+
+    if(
+    (colliderular[0]>=colliderlubang[0] && colliderular[0]<= colliderlubang[2])&&(colliderular[1]>=colliderlubang[1]&& colliderular[1]>=colliderlubang[3]) ||
+    (colliderular[2]>=colliderlubang[0] && colliderular[2]<= colliderlubang[2])&&(colliderular[3]>=colliderlubang[1]&& colliderular[3]>=colliderlubang[3])
+    ){
+        horizontalMove=0;
+        verticalMove=0;
+        movelubang=40;
+        colliderlubang[1]=74;
+        colliderlubang[3]=62;
+        colliderular[0]=78;
+        colliderular[1]=23;
+        colliderular[2]=82;
+        colliderular[3]=-16;
+    }
 }
-void movetriangle (int a){
+
+void movetriangle (int a){//73,149,88,129
     movetri-- ;
+    collidersegitiga[1]--;
+    collidersegitiga[3]--;
     if (movetri == -110){
         movetri = 40;
+        collidersegitiga[1]=149;
+        collidersegitiga[3]=129;
     }
     glutTimerFunc(100,movetriangle,1);
+
+    if(
+    (colliderular[0]>=collidersegitiga[0] && colliderular[0]<= collidersegitiga[2])&&(colliderular[1]>=collidersegitiga[1]&& colliderular[1]>=collidersegitiga[3]) ||
+    (colliderular[2]>=collidersegitiga[0] && colliderular[2]<= collidersegitiga[2])&&(colliderular[3]>=collidersegitiga[1]&& colliderular[3]>=collidersegitiga[3])
+    ){
+        horizontalMove=0;
+        verticalMove=0;
+        movetri=40;
+        collidersegitiga[1]=149;
+        collidersegitiga[3]=129;
+        colliderular[0]=78;
+        colliderular[1]=23;
+        colliderular[2]=82;
+        colliderular[3]=-16;
+    }
 }
+
 void myinit(){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
