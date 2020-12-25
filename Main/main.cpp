@@ -17,6 +17,8 @@ float posisiY[2] = {0,20};
 
 int movebatu = 40;
 int movepohon = 40;
+int movelubang = 40;
+int movetri = 40;
 
 //menggambar objek ular
 void ObjekUlar(){
@@ -295,6 +297,13 @@ void charController(int data)
 
     glutPostRedisplay();
     glutTimerFunc(1,charController,0);
+}
+
+void triangle(){
+    glPushMatrix();
+    glTranslatef(20,45,0);
+    segitiga();
+    glPopMatrix();
 }
 
 void pinggiran(){
@@ -693,28 +702,6 @@ void displayMe(void){
     glVertex2f(111, 0);
     glEnd();
 
-    glBegin(GL_POLYGON);
-    glColor3f(1.0,1.0,1.0);
-    glVertex2f(54, 30);
-    glVertex2f(53, 35);
-    glVertex2f(62, 38);
-    glVertex2f(68, 35);
-    glVertex2f(68, 30);
-    glEnd();
-
-    glBegin(GL_POLYGON);
-    glColor3f(1.0,1.0,0.0);
-    glVertex2f(93, 56);
-    glVertex2f(98, 58);
-    glVertex2f(106, 60);
-    glVertex2f(108, 56);
-    glVertex2f(104, 55);
-    glVertex2f(106, 53);
-    glVertex2f(98, 51);
-    glVertex2f(95, 53);
-    glEnd();
-
-
     glutSwapBuffers();
 
     //Objek Batu
@@ -723,7 +710,18 @@ void displayMe(void){
     batu();
     glPopMatrix();
 
+    glPushMatrix();
+    glTranslatef(0,movelubang,0);
+    lubang();
+    glPopMatrix();
+
     pinggir();
+
+    //segitiga();
+    glPushMatrix();
+    glTranslatef(0,movetri,0);
+    triangle();
+    glPopMatrix();
 
     glPushMatrix();
     glTranslatef(0,movepohon,0);
@@ -754,11 +752,25 @@ void movement (int a){
 void move2 (int a){
     movepohon-- ;
     if (movepohon == -70){
-        movepohon == 40;
+        movepohon = 40;
     }
     glutTimerFunc(100,move2,1);
 }
 
+void movelubang2 (int a){
+    movelubang-- ;
+    if (movelubang == -70){
+        movelubang = 40;
+    }
+    glutTimerFunc(100,movelubang2,1);
+}
+void movetriangle (int a){
+    movetri-- ;
+    if (movetri == -70){
+        movetri = 40;
+    }
+    glutTimerFunc(100,movetriangle,1);
+}
 void myinit(){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -780,6 +792,8 @@ int main (int argc, char**argv)
     glutDisplayFunc(displayMe);
     glutTimerFunc(100,movement,1);
     glutTimerFunc(100,move2,1);
+    glutTimerFunc(100,movelubang2,1);
+    glutTimerFunc(100,movetriangle,1);
     glutTimerFunc(1,charController,0);
     myinit();
     glutMainLoop();
