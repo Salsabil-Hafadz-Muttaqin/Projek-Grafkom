@@ -1,6 +1,10 @@
 #include <windows.h>
 #include <GL/glut.h>
 #include <GL/gl.h>
+<<<<<<< HEAD
+#include <stdio.h>
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
 #include "batu.h"
 #include "pinggir.h"
 #include "pohon.h"
@@ -19,6 +23,10 @@ int movebatu = 40;
 int movepohon = 40;
 int movelubang = 40;
 int movetri = 40;
+<<<<<<< HEAD
+int scorePoin=0;
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
 
 //batas
 float colliderbatu [4]= {54.3,98,65.7,90};//x1,y1,x2,y2
@@ -669,8 +677,44 @@ void gambarCollider() { //buat ngecek collider
     glRectd(colliderlubang[0], colliderlubang[1], colliderlubang[2], colliderlubang[3]);
 }
 
+<<<<<<< HEAD
+void text(int x, int y, const char *string, void *font, float r, float g, float b){
+    // glScaled(1.5,1.5,0);
+    glColor3f(r, g, b);
+	glRasterPos2f(x, y);
+	int len = (int)strlen(string);
+	for (int i = 0; i < len; i++) {
+		glutBitmapCharacter(font, string[i]);
+	}
+}
+
+void timerScore(int){
+    glutTimerFunc(100,timerScore,0);
+    scorePoin+=1;
+}
+
+void scoreKamu (){
+    glPushMatrix();
+    text(28, 86, "Score : ", GLUT_BITMAP_HELVETICA_18,1.0,1.0,1.0);
+    glPopMatrix();
+}
+
+void tempatScore (){
+    glPushMatrix();
+    char poin[1000];
+    sprintf(poin, "%d", scorePoin);
+    text(40, 86, poin, GLUT_BITMAP_HELVETICA_18,1.0, 1.0, 1.0);
+
+    glPopMatrix();
+}
+
 void displayMe(void){
 
+
+=======
+void displayMe(void){
+
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
     glBegin(GL_POLYGON); //warna background hutan
     glColor3b(2,70,20);
     glVertex2f(0, 0);
@@ -756,6 +800,12 @@ void displayMe(void){
     pinggiran2();
     pinggiran3();
     pinggiran4();
+<<<<<<< HEAD
+    scoreKamu();
+    tempatScore();
+
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
     glFlush();
     glutSwapBuffers();
 }
@@ -777,6 +827,10 @@ void movement (int a){
         horizontalMove=0;
         verticalMove=0;
         movebatu=40;
+<<<<<<< HEAD
+        scorePoin=0;
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
         colliderbatu[1]=98;//54.3,98,65.7,90
         colliderbatu[3]=90;
         colliderular[0]=79;
@@ -804,6 +858,10 @@ void move2 (int a){//79,122,104,115
         horizontalMove=0;
         verticalMove=0;
         movepohon=40;
+<<<<<<< HEAD
+        scorePoin=0;
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
         colliderbatang[1]=122;
         colliderbatang[3]=115;
         colliderular[0]=79;
@@ -831,6 +889,10 @@ void movelubang2 (int a){//91,74,110.18,62
         horizontalMove=0;
         verticalMove=0;
         movelubang=90;
+<<<<<<< HEAD
+        scorePoin=0;
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
         colliderlubang[1]=112;
         colliderlubang[3]=124;
         colliderular[0]=79;
@@ -858,6 +920,10 @@ void movetriangle (int a){//73,149,88,129
         horizontalMove=0;
         verticalMove=0;
         movetri=40;
+<<<<<<< HEAD
+        scorePoin=0;
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
         collidersegitiga[1]=149;
         collidersegitiga[3]=129;
         colliderular[0]=79;
@@ -867,6 +933,11 @@ void movetriangle (int a){//73,149,88,129
     }
 }
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
 void myinit(){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -891,6 +962,10 @@ int main (int argc, char**argv)
     glutTimerFunc(100,movelubang2,1);
     glutTimerFunc(100,movetriangle,1);
     glutTimerFunc(1,charController,0);
+<<<<<<< HEAD
+    glutTimerFunc(100,timerScore,0);
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
     myinit();
     glutMainLoop();
     return 0;

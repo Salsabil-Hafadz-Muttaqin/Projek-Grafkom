@@ -39,3 +39,41 @@
 	<GL/glu.h>
 	<GL/glut.h>
 
+<<<<<<< HEAD
+1608958133 source:d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\alpha\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	"batu.h"
+	"pinggir.h"
+	"pohon.h"
+	"lubang.h"
+	"segitiga.h"
+
+1608955570 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\alpha\batu.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608955570 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\alpha\pinggir.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608955570 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\alpha\pohon.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608955570 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\alpha\lubang.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608955570 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\alpha\segitiga.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+=======
+>>>>>>> e12971976732f7b500a096f2c1cad7046d5dc281
