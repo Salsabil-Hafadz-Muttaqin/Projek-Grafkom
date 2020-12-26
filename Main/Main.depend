@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1608930139 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
+1608931407 source:c:\users\asus\onedrive\documents\semester 3\grafika komputer\snake\projek-grafkom\main\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<GL/gl.h>
