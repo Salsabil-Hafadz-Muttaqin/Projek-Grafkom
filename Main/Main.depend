@@ -280,3 +280,38 @@
 
 1608809481 d:\kulyah\semester 3\grafika komputer\glut\projek\projek-grafkom\main\pohon.h
 
+1608947033 source:e:\grafkom\project\projek-grafkom\main\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	"batu.h"
+	"pinggir.h"
+	"pohon.h"
+	"lubang.h"
+	"segitiga.h"
+
+1608946570 e:\grafkom\project\projek-grafkom\main\batu.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\project\projek-grafkom\main\pinggir.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\project\projek-grafkom\main\pohon.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\project\projek-grafkom\main\lubang.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\project\projek-grafkom\main\segitiga.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+

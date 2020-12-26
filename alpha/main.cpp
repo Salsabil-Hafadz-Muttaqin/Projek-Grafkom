@@ -22,14 +22,15 @@ int movetri = 40;
 
 //batas
 float colliderbatu [4]= {54.3,98,65.7,90};//x1,y1,x2,y2
-float colliderular [4]= {78,23,82,-16};
+float colliderular [4]= {79,27,81,10};
 float collidersegitiga [4]={73,149,88,129};
 float colliderbatang [4]={79,122,104,115};
-float colliderlubang [4]={91,74,110.18,62};
+float colliderlubang [4]={91,62,110.18,74};
 
 //menggambar objek ular
 void ObjekUlar(){
-    glScalef(0.4,0.4,0);
+    glScalef(0.3,0.3,0);
+    glTranslatef(4,0,0);
     glBegin(GL_QUADS);//Bagian Atas
     glColor3f(1, 1, 1);//warna objek
     glVertex2f(11,19); //A
@@ -660,7 +661,7 @@ void Api(){
 //}
 
 void gambarCollider() { //buat ngecek collider
-    glColor3b(120,120,120);
+    //glColor3b(120,120,120);
     glRectd(colliderbatu[0], colliderbatu[1], colliderbatu[2], colliderbatu[3]);
     glRectd(colliderular[0], colliderular[1], colliderular[2], colliderular[3]);
     glRectd(collidersegitiga[0], collidersegitiga[1], collidersegitiga[2], collidersegitiga[3]);
@@ -670,16 +671,16 @@ void gambarCollider() { //buat ngecek collider
 
 void displayMe(void){
 
-    glBegin(GL_POLYGON);
-    glColor3b(41, 14, 5);
+    glBegin(GL_POLYGON); //warna background hutan
+    glColor3b(2,70,20);
     glVertex2f(0, 0);
     glVertex2f(0, 90);
     glVertex2f(160, 90);
     glVertex2f(160, 0);
     glEnd();
 
-    glBegin(GL_POLYGON);
-    glColor3b(0, 0, 0);
+    glBegin(GL_POLYGON); //warna jalan
+    glColor3b(14,40,28);
     glVertex2f(50, 0);
     glVertex2f(50, 90);
     glVertex2f(110, 90);
@@ -694,7 +695,7 @@ void displayMe(void){
     glVertex2f(51, 0);
     glEnd();
 
-    glBegin(GL_POLYGON);
+    /*glBegin(GL_POLYGON);
     glColor3f(0.0,0.0,1.0);
     glVertex2f(70, 0);
     glVertex2f(70, 90);
@@ -708,7 +709,7 @@ void displayMe(void){
     glVertex2f(90, 90);
     glVertex2f(91, 90);
     glVertex2f(91, 0);
-    glEnd();
+    glEnd();*/
 
     glBegin(GL_POLYGON);
     glColor3f(0.0,0.0,1.0);
@@ -721,7 +722,7 @@ void displayMe(void){
     glutSwapBuffers();
 
     //Objek Batu
-    gambarCollider();
+    //gambarCollider();
     glPushMatrix();
     glTranslatef(0,movebatu,0);
     batu();
@@ -778,10 +779,10 @@ void movement (int a){
         movebatu=40;
         colliderbatu[1]=98;//54.3,98,65.7,90
         colliderbatu[3]=90;
-        colliderular[0]=78;
-        colliderular[1]=23;
-        colliderular[2]=82;
-        colliderular[3]=-16;
+        colliderular[0]=79;
+        colliderular[1]=27;
+        colliderular[2]=81;
+        colliderular[3]=8;
     }
 }
 
@@ -805,10 +806,10 @@ void move2 (int a){//79,122,104,115
         movepohon=40;
         colliderbatang[1]=122;
         colliderbatang[3]=115;
-        colliderular[0]=78;
-        colliderular[1]=23;
-        colliderular[2]=82;
-        colliderular[3]=-16;
+        colliderular[0]=79;
+        colliderular[1]=27;
+        colliderular[2]=81;
+        colliderular[3]=8;
     }
 }
 
@@ -817,9 +818,9 @@ void movelubang2 (int a){//91,74,110.18,62
     colliderlubang[1]--;
     colliderlubang[3]--;
     if (movelubang == -70){
-        movelubang = 40;
-        colliderlubang[1]=74;
-        colliderlubang[3]=62;
+        movelubang = 70;
+        colliderlubang[1]=112;
+        colliderlubang[3]=124;
     }
     glutTimerFunc(100,movelubang2,1);
 
@@ -829,13 +830,13 @@ void movelubang2 (int a){//91,74,110.18,62
     ){
         horizontalMove=0;
         verticalMove=0;
-        movelubang=40;
-        colliderlubang[1]=74;
-        colliderlubang[3]=62;
-        colliderular[0]=78;
-        colliderular[1]=23;
-        colliderular[2]=82;
-        colliderular[3]=-16;
+        movelubang=90;
+        colliderlubang[1]=112;
+        colliderlubang[3]=124;
+        colliderular[0]=79;
+        colliderular[1]=27;
+        colliderular[2]=81;
+        colliderular[3]=8;
     }
 }
 
@@ -843,7 +844,7 @@ void movetriangle (int a){//73,149,88,129
     movetri-- ;
     collidersegitiga[1]--;
     collidersegitiga[3]--;
-    if (movetri == -110){
+    if (movetri == -200){
         movetri = 40;
         collidersegitiga[1]=149;
         collidersegitiga[3]=129;
@@ -859,10 +860,10 @@ void movetriangle (int a){//73,149,88,129
         movetri=40;
         collidersegitiga[1]=149;
         collidersegitiga[3]=129;
-        colliderular[0]=78;
-        colliderular[1]=23;
-        colliderular[2]=82;
-        colliderular[3]=-16;
+        colliderular[0]=79;
+        colliderular[1]=27;
+        colliderular[2]=81;
+        colliderular[3]=8;
     }
 }
 
@@ -882,7 +883,7 @@ int main (int argc, char**argv)
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
     glutInitWindowSize(1000, 1000);
     glutInitWindowPosition(0,0);
-    glutCreateWindow("Ver 1.2");
+    glutCreateWindow("Alpha Version");
     gluOrtho2D(0, 160, 0, 90);
     glutDisplayFunc(displayMe);
     glutTimerFunc(100,movement,1);

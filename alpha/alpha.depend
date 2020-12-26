@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1608951162 source:e:\grafkom\new folder\alpha\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<GL/gl.h>
+	"batu.h"
+	"pinggir.h"
+	"pohon.h"
+	"lubang.h"
+	"segitiga.h"
+
+976692172 c:\program files\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1608946570 e:\grafkom\new folder\alpha\batu.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\new folder\alpha\pinggir.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\new folder\alpha\pohon.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\new folder\alpha\lubang.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
+1608946570 e:\grafkom\new folder\alpha\segitiga.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+
